@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .work{
+            display:grid;
+            grid-auto-flow:row;
+            flex-wrap: nowrap;
+        }
+        #workspace{
+            grid-auto-columns:25px;
+            grid-auto-rows:40px;
+            grid-area:1/1/1/1;
+        }
+        #search{
+            grid-auto-columns: auto;
+            grid-auto-rows:40px;
+            grid-area:1/2/1/14;
+            text-align: right;
+        }
+        .first{
+            font-size: 25px;
+            background-color:rgb(172, 136, 167);
+            border:1px solid rgb(167, 75, 154); 
+            background-color: rgb(172, 136, 167);
+            text-align:center;
+            padding:10px;
+            color:rgb(70, 57, 68);
+
+        }
+        #home{
+            grid-auto-rows:25px;
+            grid-area:2/1/2/1;
+        }
+        #custom{
+            grid-auto-columns:25px;
+            grid-auto-rows:25px;
+            grid-area:3/1/3/1;
+        }
+        #dept{
+            grid-auto-columns:25px;
+            grid-auto-rows:25px;
+            grid-area:4/1/4/1;
+        }
+        #med{
+            grid-auto-columns:25px;
+            grid-auto-rows:25px;
+            grid-area:5/1/5/1;
+        }
+        #acc{
+            grid-auto-columns:25px;
+            grid-auto-rows:auto;
+            grid-area:6/1/21/1;
+        }
+        .sec{
+            background-color:rgb(172, 136, 167);
+            font-size:25px;
+            overflow:hidden;
+            border:1px solid  rgb(167, 75, 154); 
+            text-align: center;
+            float:left;
+            color:rgb(70, 57, 68);
+            padding:10px;
+        }
+        .sec:hover{
+            background-color:rgba(217, 232, 15, 0.943);
+        }
+        .anchor{
+            font-size:25px;
+            text-decoration:none;
+            color:rgb(70, 57, 68);
+        }
+        .anchor:hover{
+            color:white;
+        }
+        #new{
+            background-color:rgb(78, 192, 95);
+            font-size: 25px;
+            color:black;
+            border:0px solid rgb(78, 192, 95);
+            border-radius:8px;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            grid-area:2/2/5/6;
+            margin:8px;
+        }
+        #dep{
+            border:0px solid rgb(167, 167, 224);
+            border-radius:8px;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            margin:8px;
+            grid-area:2/6/5/10;
+            background-color:rgb(167, 167, 224);
+            font-size:25px;
+
+        }
+        #total{
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            margin:8px;
+            background-color:rgb(217, 154, 36);
+            border-radius:8px;
+            grid-area:2/10/5/14;
+            font-size:25px;
+        }
+        #table{
+            grid-area:5/2/9/14;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            margin:auto;
+        }
+        table,td{
+            border:1px solid greenyellow;
+            padding-left:50px;
+            padding-right:50px;
+            border-collapse:collapse;
+            padding-top:10px;
+            padding-bottom:10px;
+            text-align:center;
+            border-radius:8px;
+        }
+        #tab2{
+            grid-area:9/2/13/14;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            margin:10px auto;
+        }
+        #media{
+            background-color:rgb(238, 126, 56);
+            font-size:25px;
+            font-weight: bold;
+            border:1px solid rgb(238, 126, 56);
+            border-radius:8px;
+            text-align:center;
+            grid-area:13/2/13/14;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            padding:5px;
+            margin-left:45px;
+            margin-right:45px;
+        }
+        .last{
+            background-color: orange;
+            border:1px solid orange;
+            border-radius:8px;
+            text-align:center;
+            font-size: 25px;
+            font-style: bold;
+            grid-auto-rows:25px;
+            grid-auto-columns:25px;
+            margin-left:45px;
+            margin-top:20px;
+        }
+        #audio{
+            grid-area:14/2/21/5;
+        }
+        #video{
+            grid-area:14/5/21/8;
+        }
+        #images{
+            grid-area:14/8/21/11;
+        }
+        #files{
+            grid-area:14/11/21/13;
+        }
+    </style>
+</head>
+<body>
+    <div class="work">
+        <div id="workspace" class="first">Workspace</div>
+        <div id="search" class="first">Search in Home</div>
+        <div id="home" class="sec"><a href="Assignment 3 Home.html" target="_self" class="anchor">Home</a></div>
+        <div id="custom" class="sec"><a href="Assignment 3 Customer.html" target="_self" class="anchor">Customers</a></div>
+        <div id="dept" class="sec"><a href="#" target="_self"  class="anchor">Departments</a></div>
+        <div id="med" class="sec"><a href="#" target="_self" class="anchor">Media</div>
+        <div><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        <div id="acc" class="sec"><a href="#" target="_self" class="anchor" style="margin-bottom:0" >My Account</a></div>
+        <div id="new">New Customers<br><br><br>24</div>
+        <div id="dep">Department Activity<br><br><br>434+</div>
+        <div id="total">Total Media Size<br><br><br>10<sub>TB</sub></div>
+        <div id="table">
+            <table>
+                <thead>
+                    <td colspan="5" style="background-color:rgb(157, 220, 94);"><b>CUSTOMERS</b></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Customer ID</b></td>
+                        <td><b>Department ID</b></td>
+                        <td><b>Name</b></td>
+                        <td><b>Email</b></td>
+                        <td><b>Total Media Size</b></td>
+                    </tr>
+                    <tr>
+                        <td>JRYT456</td>
+                        <td>UHDSG</td>
+                        <td>JOHN</td>
+                        <td>skadj@gmail.com</td>
+                        <td>2 GB</td>
+                    </tr>
+                    <tr>
+                        <td>JHSAG636</td>
+                        <td>ASDFJ</td>
+                        <td>JANE</td>
+                        <td>skadj@gmail.com</td>
+                        <td>0.4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>ASJHSA77</td>
+                        <td>SAFEF</td>
+                        <td>BOB</td>
+                        <td>skadj@gmail.com</td>
+                        <td>200 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KSAHKJ366</td>
+                        <td>AFEEE</td>
+                        <td>MARY</td>
+                        <td>skadj@gmail.com</td>
+                        <td>50 GB</td>
+                    </tr>
+                    <tr>
+                        <td>SAKJHD35</td>
+                        <td>REYER</td>
+                        <td>KARAN</td>
+                        <td>skadj@gmail.com</td>
+                        <td>45 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KKHUASU33</td>
+                        <td>HJHGF</td>
+                        <td>CHRISSY</td>
+                        <td>skadj@gmail.com</td>
+                        <td>500 GB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+           <div id="tab2">
+                <table>
+                    <thead>
+                        <td colspan="5" style="background-color:rgb(153, 153, 187);"><b>DEPARTMENTS</b></td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          
+                            <td style="border-color:rgb(153, 153, 187);">DEPARTMENT ID</td>
+                            <td style="border-color:rgb(153, 153, 187);">DEPARTMENT<br> INCHARGE</td>
+                            <td style="border-color:rgb(153, 153, 187);">NAME</td>
+                            <td style="border-color:rgb(153, 153, 187);">SIZE</td>
+                            <td style="border-color:rgb(153, 153, 187);">TOTAL MEDIA SIZE</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">JRYT456</td>
+                            <td style="border-color:rgb(153, 153, 187);">UHDSG</td>
+                            <td style="border-color:rgb(153, 153, 187);">JOHN</td>
+                            <td style="border-color:rgb(153, 153, 187);">23</td>
+                            <td style="border-color:rgb(153, 153, 187);">2 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">JHSAG636</td>
+                            <td style="border-color:rgb(153, 153, 187);">ASDFJ</td>
+                            <td style="border-color:rgb(153, 153, 187);">JANE</td>
+                            <td style="border-color:rgb(153, 153, 187);">45</td>
+                            <td style="border-color:rgb(153, 153, 187);">0.4 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">ASJHSA77</td>
+                            <td style="border-color:rgb(153, 153, 187);">SAFEF</td>
+                            <td style="border-color:rgb(153, 153, 187);">BOB</td>
+                            <td style="border-color:rgb(153, 153, 187);">76</td>
+                            <td style="border-color:rgb(153, 153, 187);">200 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">KSAHKJ366</td>
+                            <td style="border-color:rgb(153, 153, 187);">AFEEE</td>
+                            <td style="border-color:rgb(153, 153, 187);">MARY</td>
+                            <td style="border-color:rgb(153, 153, 187);">87</td>
+                            <td style="border-color:rgb(153, 153, 187);">50 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">SAKJHD35</td>
+                            <td style="border-color:rgb(153, 153, 187);">REYER</td>
+                            <td style="border-color:rgb(153, 153, 187);">KARAN</td>
+                            <td style="border-color:rgb(153, 153, 187);">76</td>
+                            <td style="border-color:rgb(153, 153, 187);">45 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:rgb(153, 153, 187);">KKHUASU33</td>
+                            <td style="border-color:rgb(153, 153, 187);">HJHGF</td>
+                            <td style="border-color:rgb(153, 153, 187);">CHRISSY</td>
+                            <td style="border-color:rgb(153, 153, 187);">78</td>
+                            <td style="border-color:rgb(153, 153, 187);">500 GB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="media" class="last">MEDIA</div>
+            <div id="audio" class="last">Audio<br><br><br>14TB</div>
+            <div id="video" class="last">Video<br><br><br>14TB</div>
+            <div id="images" class="last">Images<br><br><br>14TB</div>
+            <div id="files" class="last">Files<br><br><br>14TB</div>
+        </div>
+</body>
+</html>
