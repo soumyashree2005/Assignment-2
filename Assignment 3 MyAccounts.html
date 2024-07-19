@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY ACCOUNTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        .work{
+            display:grid;
+            grid-auto-flow:row;
+            column-gap:0px;
+        }
+        #workspace{
+            grid-auto-columns:25px;
+            grid-auto-rows:40px;
+            grid-area:1/1/1/1;
+        }
+        #search{
+            grid-auto-columns: auto;
+            grid-auto-rows:40px;
+            grid-area:1/2/1/11;
+            text-align: right;
+        }
+        .first{
+            font-size: 25px;
+            background-color:rgb(172, 136, 167);
+            border:1px solid rgb(167, 75, 154); 
+            background-color: rgb(172, 136, 167);
+            text-align:center;
+            padding:10px;
+            color:rgb(70, 57, 68);
+
+        }
+        #home{
+            grid-auto-rows:35px;
+            grid-area:2/1/2/1;
+        }
+        #custom{
+            grid-auto-columns:25px;
+            grid-auto-rows:35px;
+            grid-area:3/1/3/1;
+        }
+        #dept{
+            grid-auto-columns:25px;
+            grid-auto-rows:35px;
+            grid-area:4/1/4/1;
+        }
+        #med{
+            grid-auto-columns:25px;
+            grid-auto-rows:35px;
+            grid-area:5/1/5/1;
+        }
+        #acc{
+            grid-auto-columns:25px;
+            grid-auto-rows:auto;
+            grid-area:6/1/20/1;
+        }
+        .sec{
+            background-color:rgb(172, 136, 167);
+            font-size:25px;
+            overflow:hidden;
+            border:1px solid  rgb(167, 75, 154); 
+            text-align: left;
+            float:left;
+            color:rgb(70, 57, 68);
+            padding:10px;
+            border-radius: 6px;
+        }
+        .sec:hover{
+            background-color:rgba(217, 232, 15, 0.943);
+        }
+        .anchor{
+            font-size:25px;
+            text-decoration:none;
+            color:rgb(70, 57, 68);
+        }
+        .anchor:hover{
+            color:white;
+        }
+        .dimen {
+            height: 30px;
+            border: 1px solid rgb(167, 75, 154);
+            outline: 1px solid rgb(167, 75, 154);
+            background-color: rgb(172, 136, 167);
+            color: rgb(70, 57, 68);
+            padding-left: 5px;
+            border-radius: 6px;
+        }
+        #get {
+            height: 34px;
+            transform: translateX(-33px);
+        }
+        .sec.active {
+      background-color: pink;
+      color: white;
+    }
+    .picture{
+            margin-top:20px;
+            margin-left:10px;
+            grid-area:2/2/6/3;
+            display:inline-block;
+
+        }
+        #nm{
+            margin:10px;
+            grid-area:6/2/8/6;
+        }
+        #eml{
+            margin:10px;
+            grid-area:8/2/11/6;
+        }
+        #phone{
+            margin:10px;
+            grid-area:11/2/14/6;
+        }
+        #date{
+            margin:10px;
+            grid-area:14/2/17/6;
+        }
+        #final{
+            margin:20px;
+            grid-area:17/2/20/6;
+            display:inline-block;
+        }
+        #save{
+            background-color: green;
+            font-style: bold;
+            font-size:20px;
+        }
+        #cancel{
+            background-color: red;
+            font-style:bold;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="work">
+        <div id="workspace" class="first"><i class="fa-brands fa-wordpress-simple"></i>Workspace</div>
+        <div id="search" class="first"><input type="text" class="dimen" placeholder="Search in Customer">
+            <button type="submit" class="dimen" id="get"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+        <div id="home" class="sec"><i class="fa-solid fa-house"></i><a href="Assignment 3 Home.html" target="_self" class="anchor">Home</a></div>
+        <div id="custom" class="sec"><i class="fa-solid fa-user-group"></i><a href="Assignment 3 Customer.html" target="_self" class="anchor">Customers</a></div>
+        <div id="dept" class="sec"><i class="fa-solid fa-address-card"></i><a href="Assignment 3 Department.html" target="_self"  class="anchor">Departments</a></div>
+        <div id="med" class="sec"><i class="fa-solid fa-image"></i><a href="Assignment 3 Media.html" target="_self" class="anchor">Media</div>
+        <div id="acc" class="sec active"><a href="Assignment 3 MyAccounts.html" target="_self" class="anchor" ><br><br><br><br><br><br><br><br><br><br><br><br><i class="fa-solid fa-user"></i> My Account</a></div>
+        <div class="picture">
+            <label for="imag"></label>
+            <input type="image" id="imag" readonly src="images.jpg" style="border:1px solid black;" height="100px" width="100px">
+            <button style="display:inline-block;" id="decor1"><i class="fa-solid fa-pencil" style="margin:10px;"></i></button>
+            <small id="error1" class="error"></small><br><br>
+       </div>
+
+       <div id="nm">
+           <label for="name1"></label><h2>Name</h2>
+           <input type="name" id="name1" name="name1" placeholder="John Doe" readonly>
+           <button id="decor2"><i class="fa-solid fa-pencil"></i></button>
+           <small id="error2" class="error"></small><br><br>
+       </div>
+
+       <div id="eml">
+           <label for="email"></label><h2>E-Mail</h2>
+           <input type="email" id="email" name="email" placeholder="abc@gmail.com" readonly>
+           <button id="decor3"><i class="fa-solid fa-pencil"></i></button>
+           <small id="error3" class="error"></small><br><br>
+       </div>
+
+       <div id="phone">
+           <label for="number"></label><h2>Phone Number</h2>
+           <input type="number" id="number" name="number" placeholder="637292XXXX" readonly>
+           <button id="decor4"><i class="fa-solid fa-pencil"></i></button>
+           <small id="error4" class="error"></small><br><br>
+       </div>
+
+       <div id="date">
+           <label for="dob"></label><h2>Date</h2>
+           <input type="date" id="dob" name="dob"  readonly>
+           <button id="decor5"><i class="fa-solid fa-pencil"></i></button>
+           <small id="error5" class="error"></small><br><br>
+       </div>
+
+       <div id="final">
+           <small id="msg"></small>
+           <button id="save">SAVE</button>
+           <button id="cancel">CANCEL</button>
+       </div>
+
+       <script>
+           document.getElementById("decor1").addEventListener("click",handleImage);
+           document.getElementById("decor2").addEventListener("click",handleName);
+           document.getElementById("decor3").addEventListener("click",handleEmail);
+           document.getElementById("decor4").addEventListener("click",handleNumber);
+           document.getElementById("decor5").addEventListener("click",handleDate);
+            function handleName(){
+               let e=document.getElementById("name1");
+               e.readOnly = false;
+               let ele=document.getElementById("error2");
+               ele.innerHTML = "Please type your name";
+               ele.display= "block";
+               ele.color = "black";
+           }
+           function handleImage(){
+               let e=document.getElementById("imag");
+               e.readOnly = false;
+               let ele=document.getElementById("error1");
+               ele.innerHTML = "Please upload the image";
+               ele.display= "block";
+               ele.color = "black";
+           }
+           function handleEmail(){
+               let e=document.getElementById("email");
+               e.readOnly = false;
+               let ele=document.getElementById("error3");
+               ele.innerHTML = "Please enter your email";
+               ele.display= "block";
+               ele.color = "black";
+           }
+           function handleNumber(){
+               let e=document.getElementById("number");
+               e.readOnly = false;
+               let ele=document.getElementById("error4");
+               ele.innerHTML = "please type your number";
+               ele.display= "block";
+               ele.color = "black";
+           }
+           function handleDate(){
+               let e=document.getElementById("dob");
+               e.readOnly = false;
+               let ele=document.getElementById("error5");
+               ele.innerHTML = "You can now edit the date";
+               ele.display= "block";
+               ele.color = "black";
+           }    
+       </script>
+   </div>
+
+</div>
+</body>
+</html>
